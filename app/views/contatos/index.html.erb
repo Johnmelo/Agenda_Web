@@ -1,0 +1,16 @@
+<h1>Listing contatos</h1>
+
+<% @contatos.each do |contato| %>
+  <ul>
+    <li><%= contato.name %></li>
+    <li><%= contato.mail %></li>
+    <li><%= contato.phone %></li>
+    <td><%= link_to 'Show', contato %></td>
+    <td><%= link_to 'Edit', edit_contato_path(contato) %></td>
+    <td><%= link_to 'Destroy', contato, confirm: 'Are you sure?', method: :delete %></td>
+  </ul>
+<% end %>
+
+<br />
+
+<%= link_to 'New Contato', new_contato_path %>

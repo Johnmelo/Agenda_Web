@@ -1,0 +1,12 @@
+<h1>:P AGENDA WEB</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+
+<% if current_user %>
+	<p>Logado como: <%= current_user.email %></p>
+<% else %>
+	<p>Nao esta logado</p>
+<% end %>
+
+<%= link_to "Add Contact", contatos_path %>
+<p></p>
+<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
