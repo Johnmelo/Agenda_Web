@@ -3,11 +3,9 @@
 <% @contatos.each do |contato| %>
   <ul>
     <li><%= contato.name %></li>
-    <li><%= contato.mail %></li>
     <li><%= contato.phone %></li>
-    <td><%= link_to 'Show', contato %></td>
-    <td><%= link_to 'Edit', edit_contato_path(contato) %></td>
-    <td><%= link_to 'Destroy', contato, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Detalhes', contato %></td>
+    <td><%= link_to 'Editar', edit_contato_path(contato) %></td>
   </ul>
 <% end %>
 
@@ -15,4 +13,4 @@
 
 <%= link_to 'Novo Contato', new_contato_path %>
 <p></p>
-<%= link_to 'Voltar', home %>
+<%= link_to 'Voltar', home_index_path %>

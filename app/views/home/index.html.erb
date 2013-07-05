@@ -1,5 +1,5 @@
-<h1>:P AGENDA WEB</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div id='corpo'>
+<h1 style="text-align:center">:P AGENDA WEB</h1>
 
 <% if current_user %>
 	<p>Logado como: <%= current_user.email %></p>
@@ -10,3 +10,4 @@
 <%= link_to "Visualizar Contatos", contatos_path %>
 <p></p>
 <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+</div>
