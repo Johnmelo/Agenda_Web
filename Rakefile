@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Agenda::Application.load_tasks
+AgendaWeb::Application.load_tasks
