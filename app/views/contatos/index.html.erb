@@ -1,0 +1,19 @@
+<h1>Listing contatos</h1>
+
+<% @contatos.each do |contato| %>
+  <ul>
+    <li><%= contato.name %></li>
+    <li><%= contato.mail %></li>
+    <li><%= contato.phone %></li>
+    <td><%= link_to 'Show', contato %></td>
+    <td><%= link_to 'Edit', edit_contato_path(contato) %></td>
+  </ul>
+<% end %>
+
+<br />
+<% if current_user %>
+	<%= link_to 'New Contato', new_contato_path %> |
+	<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+<% else %>
+	<%= link_to "Sign Up", new_user_registration_path %>
+<% end %>

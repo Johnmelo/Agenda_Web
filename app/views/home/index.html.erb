@@ -1,0 +1,15 @@
+<h1>:P AGENDA WEB</h1>
+
+<% if current_user %>
+	<p>Logado como: <%= current_user.email %></p>
+	<p></p>
+	<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+	<p></p>
+	<%= link_to "Contact", contatos_path %>
+<% else %>
+	<p>Nao esta logado</p>
+	<p></p>
+	<%= link_to "spy", contatos_path %>
+	<p></p>
+	<%= link_to "Sign Up", new_user_registration_path %>
+<% end %>
