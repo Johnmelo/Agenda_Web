@@ -2,4 +2,4 @@
 require File.expand_path('../application', __FILE__)
 
 # Initialize the rails application
-AgendaWeb::Application.initialize!
+Agenda::Application.initialize!
